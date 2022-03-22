@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Search and add new key in object array</title>
+    </head>
+
+    <body>
+        <h3>Search and add new key in object array</h3>
+
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+
+        <p id="i"></p>
+
+        <script>
+            const states =  [
+                {name: 'Gujarat', capital: 'Gandhinagar'},
+                {name: 'Bihar', capital: 'Patna'},
+                {name: 'Assam', capital: 'Dispur'},
+                {name: 'Uttarakhand', capital: 'Dehradun'},
+                {name: 'Mizoram', capital: 'Aizawl'},
+            ]
+            console.log(states);
+
+            document.getElementById('demo1').innerHTML = 
+                    states[0].name + " - " + states[0].capital + "<br>" + 
+                    states[1].name + " - " + states[1].capital + "<br>" +
+                    states[2].name + " - " + states[2].capital + "<br>" +
+                    states[3].name + " - " + states[3].capital + "<br>" +
+                    states[4].name + " - " + states[4].capital + "<br>" ;
+
+            states[0].dist = 33  ;
+            document.getElementById('demo2').innerHTML = 
+                    states[0].name + " - " + states[0].capital + " District: "  + states[0].dist;
+            console.log(states);     
+            
+           let search = states.find( function(value, index){
+               if(value.name == 'Assam')
+               return true;
+               
+           })
+
+           console.log(search);
+           
+        </script>
+    </body>
+</html>

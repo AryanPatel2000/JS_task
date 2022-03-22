@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Find longest value from string array</title>
+    </head>
+
+    <body>
+        <h3>Find longest value from string array</h3>
+        <p id="demo"></p>
+
+        <p id="i1"></p>
+        
+
+        <script>
+            const states = ['Gujarat', 'Maharashtra', 'Rajsthan', 'Goa', 'UP', 'Arunachal Pradesh' ];
+            document.getElementById('demo').innerHTML = states;
+
+            let long = states.sort( function(a, b) { return b.length - a.length});
+            document.getElementById('i1').innerHTML = 'Longest value is: '+ long[0]  + 
+                                                        '<br>Length is: '  + long[0].length;
+
+            
+        </script>
+    </body>
+</html>

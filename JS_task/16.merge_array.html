@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Merge two arrays and removes all duplicates elements</title>
+    </head>
+
+    <body>
+        <h3>Merge two arrays and removes all duplicates elements</h3>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+
+        <p id="i1"></p>
+
+        <button onclick="removeDuplicates()">Remove Duplicates Elements</button>
+        <p id="i2"></p>
+
+        <script>
+            const state1 = ['Gujarat', 'Rajsthan', 'MP', 'Maharashtra', 'Goa', 'Kerala', 'UP'];
+            document.getElementById('demo1').innerHTML ='Array-1 = ' + state1;
+
+
+            const state2 = ['J&K', 'Ladakh', 'Punjab', 'Rajsthan', 'UP', 'MP', 'Maharashtra']
+            document.getElementById('demo2').innerHTML = "Array-2 = " + state2;
+
+            const merge = [...state1,...state2];
+            //const merge = state1.concat(state2);
+            document.getElementById('i1').innerHTML = 'Merging of Array =  '  + merge  ;
+
+            function removeDuplicates()
+            {
+                const arr = [...new Set(merge)];
+                document.getElementById('i2').innerHTML =  arr;
+            }
+            
+        </script>
+    </body>
+</html>

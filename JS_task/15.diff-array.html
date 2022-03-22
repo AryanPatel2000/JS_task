@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Find different between two arrays</title>
+    </head>
+
+    <body>
+        <h3>find different between two arrays</h3>
+
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+       
+        <p id="i"></p>
+
+        <script>
+            const num1 = [10,20,40,60,80,9,0,100];
+            document.getElementById('demo1').innerHTML = "Array-1 = " +  num1;
+
+            const num2 = [10,20,40,60,80];
+            document.getElementById('demo2').innerHTML = "Array-2 = " + num2;
+            
+           
+           
+          
+           let difference = num1.filter(function(value) {value =!num2.includes(value); return value})
+           console.log(difference);
+           document.getElementById('i').innerHTML = 'Difference = ' + difference;
+            
+            
+
+
+        </script>
+    </body>
+</html>

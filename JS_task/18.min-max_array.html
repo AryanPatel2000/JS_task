@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Find smaller and greater number from given array</title>
+    </head>
+
+    <body>
+        <h3>Find smaller and greater number from given array</h3>
+
+        <p id="demo"></p>
+
+        <p id="i1"></p>
+        <p id="i2"></p>
+        
+
+        <script>
+            const num = [10,30,40,60,80,100];
+           let a = document.getElementById('demo').innerHTML = num;
+
+            
+                
+
+               let max = num.sort( function (a, b) { return b - a});
+               document.getElementById('i1').innerHTML = 'Maximum Number is: ' + max[0];
+                
+               let min = num.sort( function(a, b) {return a - b});
+               document.getElementById('i2').innerHTML = 'Minimum Number is: ' + min[0]; 
+
+            //    let n = Math.max.apply(null,num);
+            //    console.log('Maximum ',n); 
+
+            //    let n1 = Math.min.apply(null, num);
+            //    console.log('Minimum ',n1); 
+                
+
+                
+            
+        </script>
+    </body>
+</html>

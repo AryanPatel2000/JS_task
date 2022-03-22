@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Unique elements from two arrays</title>
+    </head>
+
+    <body>
+        <h3>Unique elements from two arrays</h3>
+
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="j"></p>
+       
+
+        <script>
+            const num1 = [10,20,40,60,80];
+            document.getElementById('demo1').innerHTML = "Array-1 = " +  num1;
+
+            const num2 = [10,20,40,60,80,90,100];
+            document.getElementById('demo2').innerHTML = "Array-2 = " + num2;
+        
+
+            let u = num1.filter(myFun)
+            document.getElementById('j').innerHTML = 'Unique Value = ' + u;
+
+            function myFun(value)
+            {
+                return value != num2.includes(value);
+            }
+
+
+        </script>
+    </body>
+</html>

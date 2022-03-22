@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <h3>Object Array</h3>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        
+        
+        
+
+        <script>
+            const states = [
+                {name: 'Gujarat', date: '1960-05-01'},
+                {name: 'Bihar', date: '1912-03-22'},
+                {name: 'Assam', date: '1928-12-02'},
+                {name: 'Uttarakhand', date: '2000-11-09'},
+                {name: 'Mizoram', date: '1987-02-20'},
+            ]
+            console.log(states)
+            document.getElementById('demo1').innerHTML = 
+                    states[0].name + " - " + states[0].date + "<br>" + 
+                    states[1].name + " - " + states[1].date + "<br>" +
+                    states[2].name + " - " + states[2].date + "<br>" +
+                    states[3].name + " - " + states[3].date + "<br>" +
+                    states[4].name + " - " + states[4].date + "<br>" ;
+
+
+        </script>
+
+        
+            <h4>Date Wise Sorting</h4>        
+            <button onclick="SortDateAsc()">Sort Ascending Order</button>
+            <p id="i1"></p>  
+
+        <script>
+
+            function SortDateAsc()
+            {
+                states.sort( function(a, b) {return new Date(a.date)  - new Date(b.date)})
+                console.log(states)
+                document.getElementById('i1').innerHTML = 
+                    states[0].name + " - " + states[0].date + "<br>" + 
+                    states[1].name + " - " + states[1].date + "<br>" +
+                    states[2].name + " - " + states[2].date + "<br>" +
+                    states[3].name + " - " + states[3].date + "<br>" +
+                    states[4].name + " - " + states[4].date + "<br>" ;
+            }
+
+        </script>
+
+
+
+              
+            <button onclick="SortDateDes()">Sort Descending Order</button>
+            <p id="i2"></p>  
+
+        <script>
+
+            function SortDateDes()
+            {
+                states.sort( function(a, b) {return new Date(b.date)  - new Date(a.date)})
+                console.log(states)
+                document.getElementById('i2').innerHTML = 
+                    states[0].name + " - " + states[0].date + "<br>" + 
+                    states[1].name + " - " + states[1].date + "<br>" +
+                    states[2].name + " - " + states[2].date + "<br>" +
+                    states[3].name + " - " + states[3].date + "<br>" +
+                    states[4].name + " - " + states[4].date + "<br>" ;
+            }
+
+        </script>
+
+        <h4>Name Wise Sorting</h4>
+
+        <button onclick="SortNameAsc()">Sort Ascending Order</button>
+            <p id="i3"></p>  
+
+        <script>
+
+            function SortNameAsc()
+            {
+                states.sort( function(a, b) {
+                        let x = a.name.toLowerCase();
+                        let y = b.name.toLowerCase();
+
+                        if( x < y ) { return -1 ;}
+                        if( x > y ) { return 1 ;}
+                        return 0;
+                });
+                console.log(states)
+                document.getElementById('i3').innerHTML = 
+                    states[0].name + " - " + states[0].date + "<br>" + 
+                    states[1].name + " - " + states[1].date + "<br>" +
+                    states[2].name + " - " + states[2].date + "<br>" +
+                    states[3].name + " - " + states[3].date + "<br>" +
+                    states[4].name + " - " + states[4].date + "<br>" ;
+            }
+
+        </script>
+
+        <button onclick="SortNameDes()">Sort Descending Order</button>
+        <p id="i4"></p>  
+
+        <script>
+
+        function SortNameDes()
+        {
+            states.sort( function(a, b) {
+                    let x = a.name.toLowerCase();
+                    let y = b.name.toLowerCase();
+
+                    if( x < y ) { return 1 ;}
+                    if( x > y ) { return -1 ;}
+                    return 0;
+            });
+            console.log(states)
+            document.getElementById('i4').innerHTML = 
+                states[0].name + " - " + states[0].date + "<br>" + 
+                states[1].name + " - " + states[1].date + "<br>" +
+                states[2].name + " - " + states[2].date + "<br>" +
+                states[3].name + " - " + states[3].date + "<br>" +
+                states[4].name + " - " + states[4].date + "<br>" ;
+        }
+
+        </script>
+
+        
+    </body>
+</html>

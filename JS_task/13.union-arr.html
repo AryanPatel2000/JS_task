@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            Union of two numeric array
+        </title>
+    </head>
+
+    <body>
+        <h3>Union of two numeric array</h3>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+
+        <p id="i"></p>
+
+        <script>
+            const num1 = [1,2,3,4,5,6,7,8,9,10,];
+            document.getElementById('demo1').innerHTML = "Array-1 = " +  num1;
+
+            const num2 = [3,4,5,6,7,8,9,10];
+            document.getElementById('demo2').innerHTML = "Array-2 = " + num2;
+            
+
+            //(...)spread operator allow us to copy all or part of existing array into another array
+            //Set is a collection of unique value
+            //new Set () create a new set
+            let union = [...new Set([...num1, ...num2])];
+            document.getElementById('i').innerHTML = "Union of array = " +  union;
+            console.log(union);
+        </script>
+    </body>
+</html>
