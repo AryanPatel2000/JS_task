@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Check value is in string or number</title>
+    </head>
+    
+    <body>
+        <h3>Check value is in string or number</h3>
+        <p id="demo"></p>
+        <p id="i"></p>
+
+        <script>
+            const val = prompt('Enter Value');
+            document.getElementById('demo').innerHTML = 'Value you entered: ' + val;
+
+            
+             if(  typeof val === 'string' && isNaN(val))
+            {
+                document.write('This is a string');
+            }
+            else 
+            {
+                document.write(val + " is  a number ");
+            }
+           
+
+        </script>
+    </body>
+</html>

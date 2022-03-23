@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Check odd even number from given number</title>
+    </head>
+
+    <body>
+        <h3>Check odd even number from given number</h3>
+
+        <p id="demo"></p>
+        <p id="i"></p>
+
+        <script>
+            const num = parseInt(prompt('Enter Number'));
+            document.getElementById('demo').innerHTML = 'Number is: ' + num;
+
+            if( num % 2 === 0)
+            {
+                document.write('Number is Even');
+            }
+            else
+            {
+                document.write('Number is Odd');
+            }
+        </script>
+    </body>
+</html>

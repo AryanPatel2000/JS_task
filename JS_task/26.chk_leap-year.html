@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Check leap year</title>
+    </head>
+
+    <body>
+        <h3>Check leap year</h3>
+
+        <p id="demo1"></p>
+        <p id="i1"></p>
+
+        <script>
+            const year = parseInt(prompt('Enter Year'));
+            document.getElementById('demo1').innerHTML = 'Year you entered: ' + year;
+
+
+            if( year % 4 == 0)
+            {
+                if(( year % 100 == 0 ) && ( year % 400 !== 0))
+                {
+                     document.write(year + " it's not a leap year");
+                }
+
+                else
+                {
+                    document.write(year + " it's  a leap year"); 
+                }
+            }
+
+            else
+                {
+                    document.write(year + " it's not a leap year"); 
+                }
+
+        </script>
+    </body>
+</html>

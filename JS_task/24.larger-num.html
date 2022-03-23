@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Find larger number of given more than three numbers</title>
+    </head>
+
+    <body>
+        <h3>Find larger number of given more than three numbers</h3>
+
+        <p id="demo1"></p>
+
+        <p id="i1"></p>
+      
+
+        <script>
+            let num1 = Number(prompt('Enter First Number'));
+            let num2 = Number(prompt('Enter Second Number'));
+            let num3 = Number(prompt('Enter Third Number'));
+            let num4 = Number(prompt('Enter Fourth Number'));
+            let num5 = Number(prompt('Enter Fifth Number'));
+
+            document.getElementById('demo1').innerHTML = 'First Number: ' + num1 + '<br>' +
+                                                         'Second Number: ' + num2 + '<br>' +    
+                                                         'Third Number: ' + num3 + '<br>' +
+                                                         'Fourth Number: ' + num4 + '<br>' +
+                                                         'Fifth Number: ' + num5 ;
+
+            document.getElementById('i1').innerHTML = 'Largest Number is: ' + Math.max(num1, num2, num3, num4, num5);
+            
+         
+
+                    
+        </script>
+    </body>
+</html>

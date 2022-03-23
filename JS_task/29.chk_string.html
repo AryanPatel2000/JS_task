@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Check string first character is in uppercase or not</title>
+    </head>
+    <body>
+        <h3>Check string first character is in uppercase or not</h3>
+
+        <p id="demo"></p>
+        
+
+        <script>
+            const str = prompt('Enter String');
+           let c=  document.getElementById('demo').innerHTML = 'String you entered:  ' + str;
+
+          
+            if( str[0].toLocaleUpperCase() == str[0])
+            {
+                document.write('String starts with upper case');
+            }
+            else
+            {
+                document.write('String starts with lower case');
+            }
+
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Convert string type array to string, string to array </title>
+    </head>
+
+    <body>
+        <h3>Convert string type array to string, string to array</h3>
+
+        <p id="demo"></p>
+
+        <h4>Converting string type array to string</h4>
+        <p id="i1"></p>
+
+        <h4>Converting string to array</h4>
+        <p id="i2"></p>
+        <p id="i3"></p>
+
+        <script>
+            const states = ['Gujarat', 'Maharashtra', 'Rajsthan', 'Goa', 'UP', 'Arunachal Pradesh' ];
+            document.getElementById('demo').innerHTML = 'Original array: ' + states;
+
+
+            let str = states.toString();
+            document.getElementById('i1').innerHTML = str;
+
+            const cap = 'Gandhinagar';
+            document.getElementById('i2').innerHTML = cap;
+            let arr = cap.split('');
+            document.getElementById('i3').innerHTML = arr;
+        </script>
+    </body>
+</html>

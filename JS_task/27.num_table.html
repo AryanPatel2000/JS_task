@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Make a number table</title>
+    </head>
+    
+    <body>
+        <h3>Make a number table</h3>
+
+        <p id="demo"> </p>
+        <p id="i1"></p>
+
+        <script>
+            let num = parseInt(prompt('Enter Number'));
+            document.getElementById('demo').innerHTML = 'Number you entered = ' + num;
+
+
+            for( let i = 1; i<= 10 ; i++)
+            {
+                let res = num * i;
+
+                document.write('<br>' + num + ' * ' + i + ' =  ' + res); 
+                
+            }
+        </script>
+    </body>
+</html>
