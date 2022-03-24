@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Check Valid Email-id</title>
+    </head>
+
+    <body>
+        <h3>Check Valid Email-id</h3>
+
+        <p id="demo"></p>
+
+        <p id="i"></p>
+
+        <script>
+            const id = prompt("Enter Email-id");
+            document.getElementById('demo').innerHTML = 'Email you entered: ' + id;
+
+           // var format = /^w+([._])*@w+([.-]?w+)*(.w{2,3})+$/;
+
+            if ( /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ .test(id))
+            {
+                document.write("It's valid email")
+            }
+            else
+            {
+                document.write("It's not valid email-id");
+            }
+        </script>
+    </body>
+</html>

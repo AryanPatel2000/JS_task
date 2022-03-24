@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Find out month name, weekday name of given datetime</title>
+    </head>
+
+    <body>
+        <h3>Find out month name, weekday name of given datetime</h3>
+
+        <p id="demo"></p>
+        <p id-='i1'></p>
+       
+
+        
+        <script>
+            const date = new Date(); 
+             document.getElementById('demo').innerHTML ='Date: ' + date + '<br>' +  'Month: ' + (date.getMonth() + 1)
+                                                         + '<br>' +  'Weekday: ' + date.getDay()   ;
+
+
+            console.log(date.getMonth() + 1);
+            console.log(date.getDay());
+
+            
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Find out previous and next date of given date</title>
+    </head>
+
+    <body>
+        <h3>Find out previous and next date of given date</h3>
+
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+
+        <script>
+            const date = new Date(); 
+            document.getElementById('demo').innerHTML ='Date: ' + date ;
+
+            date.setDate(date.getDate() - 1 ) ;
+            document.getElementById('demo1').innerHTML = 'Previous Date is: ' + date;
+
+            
+            date.setDate(date.getDate() + 2 ) ;
+            document.getElementById('demo2').innerHTML = 'Next Date is: ' + date;
+
+            console.log();
+        </script>
+    </body>
+</html>

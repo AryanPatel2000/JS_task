@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Find out first and last date of month of given date</title>
+    </head>
+
+    <body>
+        <h3>Find out first and last date of month of given date</h3>
+
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+       
+
+        <script>
+            const date = new Date(); 
+            document.getElementById('demo1').innerHTML ='Date: ' + date ;
+
+            date.setMonth(date.getMonth() , 1 ) ;
+            document.getElementById('demo2').innerHTML = 'First Date of Month is: ' + date;
+
+            date.setMonth(date.getMonth() ,31 ) ;
+            document.getElementById('demo3').innerHTML = 'Last Date of Month is: ' + date;
+
+            
+           
+
+            console.log();
+        </script>
+
+    </body>
+</html>

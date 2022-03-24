@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Calculate age of given date</title>
+    </head>
+
+    <h3>Calculate age of given date</h3>
+
+    <p id="i1"></p>
+    <p id="i2"></p>
+    <script>
+            const dob = prompt("Please enter your date of birth:") ;
+            let d = new Date(dob);
+
+            document.getElementById('i1').innerHTML = 'Date you entered: ' + d;
+
+            let y = d.getFullYear();
+           // let b_year = dob.getFullYear(); 
+           // let date = new Date();
+           // let year = date.getFullYear();
+
+            function getAge(birth_year)
+            {
+                let today = new Date();
+                let current_year = today.getFullYear();
+                let age = current_year - birth_year;
+                return age;
+
+            }
+            var calculatedAge = getAge(y)
+            document.write('You are ' + calculatedAge + ' year old')
+            
+    </script>
+</html>

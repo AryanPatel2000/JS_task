@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Find out first and last date of previous and next months of given date</title>
+    </head>
+
+    <body>
+        <h3>Find out first and last date of previous and next months of given date</h3>
+
+        <p id="demo1"></p>
+
+        <p id="i1"></p>
+        <p id="i2"></p>
+        <p id="i3"></p>
+        <p id="i4"></p>
+       
+
+        <script>
+            var date = new Date(); 
+            document.getElementById('demo1').innerHTML = "Today's Date: " + date ;
+
+            date.setMonth(date.getMonth(),0 ) ;
+            console.log(date)
+            document.getElementById('i1').innerHTML = 'Last Date of Previous Month is: ' + date;
+
+            date.setMonth(date.getMonth() ,1 ) ;
+            document.getElementById('i2').innerHTML = 'First Date of Previous Month is: ' + date;
+
+            
+            date.setMonth(date.getMonth() +2 ) ;
+            document.getElementById('i3').innerHTML = 'First Date of Next Month is: ' + date;
+
+            date.setMonth(date.getMonth() ,30);
+            document.getElementById('i4').innerHTML = 'Last Date of Next Month is: ' + date;
+
+            
+        </script>
+    </body>
+</html>
