@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>How many days between two dates, and also gives date list panding</h3>
+
+        <p id="i1"></p>
+        <p id="i2"></p>
+        <p id="i3"></p>
+        <p id="i4"></p>
+
+        <script>
+            // const d1 = prompt('Enter Date-1 \n in MM,DD,YYY fromat');
+            // const date1 = new Date(d1) ;
+            // document.getElementById('i1').innerHTML = 'First Date you entered: ' + date1;
+
+            // const d2 = prompt('Enter Date-2 \n in MM,DD,YYY fromat');
+            // const date2 = new Date(d2) ;
+            // document.getElementById('i2').innerHTML = 'Second Date you entered: ' + date2;
+
+            var date1 = new Date('2022, 03, 31') ;
+            document.getElementById('i1').innerHTML = 'First Date : ' + date1;
+
+            var date2 = new Date() ;
+            document.getElementById('i2').innerHTML = 'Second Date : ' + date2;
+
+            const difference = date1.getTime() - date2.getTime();
+
+            let days = Math.round(difference / ( 1000 * 3600 * 24 ));
+
+
+            document.getElementById('i3').innerHTML = 'Days between two dates is: ' + days + ' days';
+
+          
+            document.write('Panding dates is' + '<br>') ;
+            var getDateArray = function(start, end) {
+                var arr = new Array();
+                var dt = new Date(start);
+                while (dt <= end) {
+                    arr.push(new Date(dt));
+                    dt.setDate(dt.getDate() + 1);
+                }
+                return arr;
+            }
+
+            var dateArr = getDateArray(date2,date1);
+
+            
+            for (var i = 0; i < dateArr.length; i++) 
+            {
+                
+                document.write('<p>' + dateArr[i] + '</p>' );
+            }
+
+        </script>
+    </body>
+</html>

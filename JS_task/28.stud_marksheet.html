@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <title>Make student marksheet</title>
+    </head>
+
+    <body>
+        <h3>Student marksheet</h3>
+
+        <button onclick="showDetail()">Show Detail</button>
+
+        <p id="demo1"></p>
+
+        <script>
+
+            const sheet = [
+                {
+                    name: 'Arun',
+                    std: 12,
+                    marks: [84, 85, 75, 74, 90]
+                },
+                {
+                    name: 'Sachin',
+                    std: 12,
+                    marks: [50,60,69,55,45]
+                },
+                {
+                    name: 'Virat',
+                    std: 12,
+                    marks: [55,70,63,54,61]
+                },
+                {
+                    name: 'Raghav',
+                    std: 12,
+                    marks: [71,75,64,78,68]
+                },
+                {
+                    name: 'Kapil',
+                    std: 12,
+                    marks: [71, 45, 62, 54, 89]
+                },
+
+            ]
+                console.log(sheet);
+
+
+              function showDetail()
+        {   
+            document.getElementById('demo1').innerHTML = 
+            'Name: ' +  sheet[0].name + '<br>Standard: ' + sheet[0].std + '<br>Marks: '  +sheet[0].marks + '<br><br>' +
+            'Name: ' +  sheet[1].name + '<br>Standard: ' + sheet[1].std + '<br>Marks: '  +sheet[1].marks + '<br><br>' +
+            'Name: ' +  sheet[2].name + '<br>Standard: ' + sheet[2].std + '<br>Marks: '  +sheet[2].marks + '<br><br>' +
+            'Name: ' +  sheet[3].name + '<br>Standard: ' + sheet[3].std + '<br>Marks: '  +sheet[3].marks + '<br><br>' +
+            'Name: ' +  sheet[4].name + '<br>Standard: ' + sheet[4].std + '<br>Marks: '  +sheet[4].marks ;
+
+        }  
+
+        </script>
+
+            <h4>Total marks of students out of 500</h4>
+
+            <p></p>
+            <script>
+                
+                let sum1 = sheet[0].marks[0] + sheet[0].marks[1] + sheet[0].marks[2] +sheet[0].marks[3] +sheet[0].marks[4]
+                document.write(sheet[0].name + ' : ' + sum1 + '<br>')
+
+                let sum2 = sheet[1].marks[0] + sheet[1].marks[1] + sheet[1].marks[2] +sheet[1].marks[3] +sheet[1].marks[4]
+                document.write(sheet[1].name + ' : ' + sum2 + '<br>')
+
+                let sum3 = sheet[2].marks[0] + sheet[2].marks[1] + sheet[2].marks[2] +sheet[2].marks[3] +sheet[2].marks[4]
+                document.write(sheet[2].name + ' : ' + sum3 + '<br>')
+
+                let sum4= sheet[3].marks[0] + sheet[3].marks[1] + sheet[3].marks[2] +sheet[3].marks[3] +sheet[3].marks[4]
+                document.write(sheet[3].name + ' : ' + sum4 + '<br>')
+
+                let sum5 = sheet[4].marks[0] + sheet[4].marks[1] + sheet[4].marks[2] +sheet[4].marks[3] +sheet[4].marks[4]
+                document.write(sheet[4].name + ' : ' + sum5 + '<br>')
+
+                
+
+            </script>
+
+
+            <h4>Average or Percentage </h4>
+
+           <script>
+               let per;
+                var per1 = sum1 / 5;
+                document.write(sheet[0].name + ' : ' + per1 + '<br>');
+
+                var per2 = sum2/5;
+                document.write(sheet[1].name + ' : ' + per2 + '<br>');
+
+                var per3 = sum3/5;
+                document.write(sheet[2].name + ' : ' + per3 + '<br>');
+
+                var per4 = sum4/5;
+                document.write(sheet[3].name + ' : ' + per4 + '<br>');
+
+                var  per5 = sum5/5;
+                document.write(sheet[4].name + ' : ' + per5 + '<br>');
+
+              
+
+           </script>
+            <h4>Assign Grad according to percentage</h4>
+           
+            <script>
+
+                 document.write('');
+
+                if( per1 >= 90)document.write(sheet[0].name + 'Pass with Distction ' + '<br><br>')
+                else if( per1 > 80 && per1 <= 90 ) document.write(sheet[0].name + ' A+ Grade ' + '<br><br>')
+                else if( per1 > 70 && per1 <= 80 ) document.write(sheet[0].name + ' A Grade ' + '<br><br>')
+                else if( per1 > 60 && per1 <= 70 ) document.write(sheet[0].name + ' B+ Grade ' + '<br><br>')
+                else if( per1 > 50 && per1 <= 60 ) document.write(sheet[0].name + ' B Grade ' + '<br><br>')
+
+                
+
+                if( per2 >= 90)document.write(sheet[1].name + 'Pass with Distction ' + '<br><br>')
+                else if( per2 > 80 && per2 <= 90 ) document.write(sheet[1].name + ' A+ Grade ' + '<br><br>')
+                else if( per2 > 70 && per2 <= 80 ) document.write(sheet[1].name + ' A Grade ' + '<br><br>')
+                else if( per2> 60 && per2 <= 70 ) document.write(sheet[1].name + ' B+ Grade ' + '<br><br>')
+                else if( per2 > 50 && per2 <= 60 ) document.write(sheet[1].name + ' B Grade ' + '<br><br>')
+             
+
+                if( per3 >= 90)document.write(sheet[2].name + 'Pass with Distction ' + '<br><br>')
+                else if( per3 > 80 && per3 <= 90 ) document.write(sheet[2].name + ' A+ Grade ' + '<br><br>')
+                else if( per3 > 70 && per3 <= 80 ) document.write(sheet[2].name + ' A Grade ' + '<br><br>')
+                else if( per3 > 60 && per3 <= 70 ) document.write(sheet[2].name + ' B+ Grade ' + '<br><br>')
+                else if( per3 > 50 && per3 <= 60 ) document.write(sheet[2].name + ' B Grade ' + '<br><br>')
+               
+                
+
+                if( per4 >= 90)document.write(sheet[3].name + 'Pass with Distction ' + '<br><br>')
+                else if( per4 > 80 && per4 <= 90 ) document.write(sheet[3].name + ' A+ Grade ' + '<br><br>')
+                else if( per4 > 70 && per4 <= 80 ) document.write(sheet[3].name + ' A Grade ' + '<br><br>')
+                else if( per4 > 60 && per4 <= 70 ) document.write(sheet[3].name + ' B+ Grade ' + '<br><br>')
+                else if( per4 > 50 && per4 <= 60 ) document.write(sheet[3].name + ' B Grade ' + '<br><br>')
+
+                
+
+                if( per5 >= 90)document.write(sheet[4].name + 'Pass with Distction ' + '<br><br>')
+                else if( per5 > 80 && per5 <= 90 ) document.write(sheet[4].name + ' A+ Grade ' + '<br><br>')
+                else if( per5 > 70 && per5 <= 80 ) document.write(sheet[4].name + ' A Grade ' + '<br><br>')
+                else if( per5 > 60 && per5 <= 70 ) document.write(sheet[4].name + ' B+ Grade ' + '<br><br>')
+                else if( per5 > 50 && per5 <= 60 ) document.write(sheet[4].name + ' B Grade ' + '<br><br>')
+
+              
+                
+
+            </script>
+
+            <h4>Sort Student List according to percentage</h4>
+            <p id="demo"></p>
+
+            <button onclick="sortList()">Sort Percentage Wise</button>
+            <p id="i"></p>
+
+        
+            <script>
+
+            per = [per1,per2,per3,per4,per5];
+
+            
+               function sortList() {
+                
+                 per.sort(function (a, b) {return b - a})
+                 console.log(per);
+
+                 per.sort(function (a, b) {return b.name - a.name})
+                 console.log(sheet);
+                 
+                
+                
+                 document.getElementById('i').innerHTML = sheet[0].name +' ' + per[0] + '<br>'  +
+                                                          sheet[3].name +' ' + per[1] + '<br>' +
+                                                          sheet[4].name +' ' + per[2] + '<br>' +
+                                                          sheet[2].name +' ' + per[3] + '<br>' +
+                                                          sheet[1].name +' ' + per[4];
+                console.log(per);
+                 }
+            </script>
+
+
+
+    </body>
+</html>

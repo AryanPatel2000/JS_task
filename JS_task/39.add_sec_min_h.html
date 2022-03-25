@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>How to add seconds,hours or minutes gap between 2 datetime</title>
+    </head>
+
+    <body>
+        <h3>How to add seconds,hours or minutes gap between 2 datetime</h3>
+        <p id="i1"></p>
+        <p id="i2"></p>
+        <p id="i3"></p>
+        <p id="i4"></p>
+        
+
+        <script>
+
+            const date1 = new Date('02,28,2022 10:30:12');
+            document.getElementById('i1').innerHTML = 'First Date: ' + date1;
+
+            
+            date1.setSeconds(date1.getSeconds()  + 12);
+            document.getElementById('i2').innerHTML ='<p>' + 'Add 12 more Seconds  ' + '</p>' + date1;
+            
+
+            date1.setMinutes(date1.getMinutes() + 15);
+            document.getElementById('i3').innerHTML ='<p>' + 'Add 15 Minutes' + '</p>' + date1;
+
+            date1.setHours(date1.getHours() + 2);
+            document.getElementById('i4').innerHTML ='<p>' + 'Add 2 Hours ' + '</p>' + date1;
+      
+      </script>
+
+        <p>Second Date</p>
+
+        
+        <p id="i5"></p>
+
+       
+        <button onclick="ModifiySecond()">Add Seconds</button>
+        <button onclick="ModifiyMinutes()">Add Minutes</button>
+        <button onclick="ModifiyHours()">Add Hours</button>
+    
+        <p id="i6"></p>
+        <p id="i7"></p>
+        <p id="i8"></p>
+        
+        
+        <script>
+            const date2 = new Date('01, 15, 2022 9:30:10');
+            document.getElementById('i5').innerHTML = 'Second Date: ' + date2;
+
+           
+
+            function ModifiySecond()
+            {
+                let sec = prompt('Enter Second You Want to add')
+                date2.setSeconds(date2.getSeconds() + +sec );
+                document.getElementById('i6').innerHTML = 'Second Updates:  ' + date2;
+            }
+
+            function ModifiyMinutes()
+            {
+                let min = prompt('Enter Minutes You Want to add')
+                date2.setMinutes(date2.getMinutes() + +min );
+                document.getElementById('i7').innerHTML = 'Minutes Updated:  ' +date2;
+            }
+            
+
+            function ModifiyHours()
+                {
+                    let hou = prompt('Enter Hours You Want to add')
+                    date2.setHours(date2.getHours() + +hou );
+                    document.getElementById('i8').innerHTML = 'Hours Updated:  ' +date2;
+                }
+        </script>
+
+
+                
+            </script>
+        
+    </body>
+</html>
