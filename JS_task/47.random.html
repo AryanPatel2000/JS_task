@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>generate randam number in given range</title>
+    </head>
+
+    <body>
+        <h3>Generate randam number in given range</h3>
+
+        <p> Random number between 0 and 100  </p>
+        
+        <button onclick="document.getElementById('demo').innerHTML=getInt(0,100)"> Click Me </button>
+
+        <p>Number is: <span id="demo"></span></p>
+        
+
+        <script>
+
+            function getInt(min, max)
+            {
+                return Math.floor( Math.random() * (max - min) ) + min
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Make a counter</title>
+    </head>
+
+    <body>
+
+        
+        <h3> Counter</h3>
+
+       
+        <h4> Current value: <span id="h4"></span> </h4>
+        <button id="inc">+</button>
+        <button id="dec">-</button>
+
+        <script>
+
+
+           
+             let count = 0;
+
+             document.addEventListener('DOMContentLoaded', function(){
+
+                setCounterValue(count);
+
+                document.querySelector('#inc').onclick = function(){
+                    setCounterValue( ++count);
+                } 
+
+                document.querySelector('#dec').onclick = function(){
+                    setCounterValue(--count);
+                }
+             });
+
+             function setCounterValue(value)
+             {
+                 document.querySelector('#h4').innerHTML = value;
+                 document.getElementById('dec').disabled = ( value <= 0 );
+                 document.getElementById('inc').disabled = ( value >= 20 );
+             }
+           
+           
+        </script>
+
+        <p>Minimum value is 0</p>
+        <p>Maximum value is 20</p>
+    </body>
+</html>

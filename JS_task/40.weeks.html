@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>How many weeks between two dates and gives all week's start and end dates</title>
+    </head>
+
+    <body>
+        <h3>How many weeks between two dates and gives all week's start and end dates</h3>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="i1"></p>
+        <p id="i2"></p>
+        <p id="i3"></p>
+        <p id="i4"></p>
+
+
+        <script>
+            const date1 = new Date('03,01,2022');
+            document.getElementById('demo1').innerHTML = 'Date one is: ' +  date1;
+
+            const date2 = new Date('03, 31,2022');
+            document.getElementById('demo2').innerHTML = 'Date two is: ' +  date2;
+
+           // let diff = date1.getTime() - date2.getTime();
+
+
+            function week_diff(date1, date2)
+            {
+                var one_week = 1000 * 60 * 60 * 24 * 7;
+
+                var date1_ms = date1.getTime();
+                var date2_ms = date2.getTime();
+
+                var diff_ms = Math.abs( date1_ms - date2_ms );
+
+                var diff = Math.floor( diff_ms / one_week);
+
+                //return diff;
+                console.log(diff)
+               document.write('Number of Weeks: ' + diff + '<br><br>');
+            }
+
+            week_diff(date1, date2);
+
+            
+            var start = date1;
+            var end = date2;
+            var sDate;
+            var eDate;
+            var dateArr = [];
+
+            while( start < end){
+
+                if(start.getDay() == 1 || (dateArr.length == 0 && !sDate) )
+                {
+                    sDate = new Date(start.getTime() );
+                }
+                if( (sDate && start.getDay() == 0) || start.getTime() == end.getTime())
+                {
+                    eDate = new Date( start.getTime());
+                }
+                if( sDate && eDate)
+                {
+                    dateArr.push( {'Start Date ' : sDate, 'End Date  ' : eDate} )
+                    
+                    document.write('Week Start date : ' + sDate + '<br><br>' )
+                    document.write('Week End date : ' + eDate + '<br><br>' )
+                    sdate = '';
+                    eDate = '';
+                }
+
+                start.setDate(start.getDate() + 1)
+
+            }
+                console.log(dateArr)
+
+            // while(start < end){
+            // if (start.getDay() == 1 || (dateArr.length == 0 && !sDate)){
+            //     sDate = new Date(start.getTime());
+            // }
+
+            // if ((sDate && start.getDay() == 0) || start.getTime() == end.getTime()){
+            //         eDate = new Date(start.getTime());
+            // }
+
+            // if(sDate && eDate){
+            //     dateArr.push({'Start Date' : sDate, 'End Date' : eDate});
+            //     sDate = '';
+            //     eDate = '';
+            // }
+
+            //     start.setDate(start.getDate() + 1);
+            // }
+
+            // console.log(dateArr);
+            // //document.write(dateArr);
+
+
+
+        </script>
+    </body>
+</html>

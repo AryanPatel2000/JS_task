@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Find out (n) number gap date list between two given dates</title>
+    </head>
+
+    <body>
+        <h3>Find out (n) number gap date list between two given dates</h3>
+
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+
+        <script>
+            const date1 = new Date('2022,03,29 10:45:25');
+            document.getElementById('demo1').innerHTML = 'Date one is: ' +  date1;
+
+            const date2 = new Date('2022,03,31 12:20:15');
+            document.getElementById('demo2').innerHTML = 'Date two is: ' +  date2 + '<br><br>';
+
+
+            let gap = Math.abs(date2 - date1) / 1000;
+            const days = Math.floor(gap / 86400);
+
+            gap -= days * 86400;
+            const hours = Math.floor(gap / 3600) % 24;
+
+            gap -= hours * 3600;
+            const minutes = Math.floor(gap / 60) % 60;
+            
+            gap -= minutes * 60;
+            const seconds = gap % 60
+            
+            document.write(days + ' Days' + '<br>' + hours + ' Hours' + '<br>' + minutes + ' Minutes' + '<br>' + seconds + ' Seconds');
+
+           
+        </script>
+    </body>
+</html>

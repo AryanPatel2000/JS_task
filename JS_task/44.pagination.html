@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Do pagination with array object</title>
+    </head>
+
+    <body>
+        <h3>Do pagination with array object</h3>
+
+        <p id="demo"></p>
+
+        <script>
+            let states = [
+                {
+                    'id': 1,
+                    'name': 'Gujarat',
+                    'capital': 'Gandhinagar',
+                },
+                {
+                    'id': 2,
+                    'name': 'Maharashtra',
+                    'capital': 'Mumbai',
+                },
+                {
+                    'id': 3,
+                    'name': 'UP',
+                    'capital': 'Lucknow',
+                },
+                {
+                    'id': 4,
+                    'name': 'Goa',
+                    'capital': 'Panji',
+                },
+                {
+                    'id': 5,
+                    'name': 'Karnataka',
+                    'capital': 'Banglore',
+                },
+                {
+                    'id': 6,
+                    'name': 'Bihar',
+                    'capital': 'Patna',
+                },
+                {
+                    'id': 7,
+                    'name': 'Uttrakhand',
+                    'capital': 'Dehradun',
+                },
+                
+            ]
+            console.log(states);
+
+
+            function arrPaginator(items, page, per_page)
+            {
+                var page = page || 1;
+                var per_page = per_page || 2;
+                offset = ( page - 1 ) * per_page;
+                
+                let paginated_items = items.slice(offset).slice(0, per_page);
+                let total_pages = Math.ceil( items.length / per_page );
+
+                return{
+                    page : page,
+                    per_page : per_page,
+                    pre_page : page - 1 ? page - 1 :null,
+                    next_page : ( total_pages > page) ? page + 1 : null,
+                    total : items.length,
+                    total_pages : total_pages,
+                    data : paginated_items
+                };
+
+            }
+
+            console.log( arrPaginator(states,2));
+
+           
+        </script>
+    </body>
+</html>
