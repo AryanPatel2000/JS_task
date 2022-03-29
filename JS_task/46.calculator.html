@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Create a  simple calculator that do for an arithmetic expression and returns its result.</title>
+    </head>
+
+    <body>
+            <h3>Create a  simple calculator that do for an arithmetic expression and returns its result.</h3>
+
+            <p id="num1"></p>
+            <p id="num2"></p>
+            <p id="ope"></p>
+            <script>
+                
+                let result;
+
+                
+
+                const number1 = parseFloat(prompt('Enter First Number'));
+                document.getElementById('num1').innerHTML = 'First Number You Entered: ' + number1;
+
+                const number2 = parseFloat(prompt('Enter Second Number'));
+                document.getElementById('num2').innerHTML = 'Second Number You Entered: ' + number2 + '<br>';
+
+                const operator = prompt('Enter Operator  \n +, \n -, \n *, \n /, \n %  ');
+                document.getElementById('ope').innerHTML = 'Operator You Entered: ' + operator + '<br>';
+
+                switch(operator)
+                {
+                    case '+':
+                            result = number1 + number2;
+                            document.write('Result is = ' + number1 + ' + ' + number2 +' = ' + result);
+                            break;
+
+                     case '-':
+                            result = number1 - number2;
+                            document.write('Result is = ' + number1 + ' - ' + number2 +' = ' + result);
+                            break;
+
+
+                    case '*':
+                            result = number1 * number2;
+                            document.write('Result is = ' + number1 + ' * ' + number2 +' = ' + result);
+                            break;  
+                            
+                    case '/':
+                            result = number1 / number2;
+                            document.write('Result is = ' + number1 + ' / ' + number2 +' = ' + result);
+                            break;   
+                            
+                    case '%':
+                            result = number1 % number2;
+                            document.write('Result is = ' + number1 + ' % ' + number2 +' = ' + result);
+                            break;  
+                            
+                    default:
+                            document.write('Invalid Operator');
+                            break;
+                }
+
+            </script>
+    </body>
+</html>

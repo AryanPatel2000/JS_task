@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Make Number Format</title>
+    </head>
+
+    <body>
+        <h3>Make Number Format</h3>
+
+        <p id="demo"></p>
+        <p id="demo1"></p>
+
+        <script>
+            const no = 100000;
+            document.getElementById('demo').innerHTML ='Number is: ' + no;
+
+            let num = no.toLocaleString( 'hi-IN', { minimumFractionDigits:2})
+
+            document.getElementById('demo1').innerHTML = 'Number Format: ' + num;
+          
+            
+            //let num1 = new Intl.NumberFormat( 'hi-IN', {maximumSignificantDigits: 3, } ).format(no);
+
+            //document.write(num1);
+
+                console.log( 'US System: ' + no.toLocaleString('en-US', {minimumFractionDigits:2} ) );
+                console.log( 'IND System: ' + no.toLocaleString('hi-IN', {minimumFractionDigits:2} ) );
+
+
+        
+        </script>
+    </body>
+</html>
