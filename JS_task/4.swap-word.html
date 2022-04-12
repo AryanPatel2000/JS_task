@@ -6,21 +6,38 @@
     <body>
         <h3>Swap given word with specified word from string replace word </h3>
         <p id="i1"></p>
+        <p id="i2"></p>
        
         
 
         <button onclick="swap()">Click to Swap</button>
 
         <p id="demo"></p>
+
         <script>
-            let str = 'Hello World';
-            document.getElementById('i1').innerHTML = 'String is: ' + str;
+             let a = prompt('Enter First value');
+             let b = prompt('Enter Second value');
+
+            // let a = 'Hello India';
+            // let b = 'Hello Gujarat';
+
+            document.getElementById('i1').innerHTML = 'Value you entered: ' + a + ' ' + b ;
+
+            //create temporary variable
+            let temp;
+
+            temp = a;
+            a = b;
+            b = temp;
+           
 
             function swap()
             {
-                let str2 = str.replace('World', 'India');
-                document.getElementById('demo').innerHTML =  str2;
+                document.getElementById('demo').innerHTML = 'After Swap: ' +  a + ' ' + b;
             }
+
+
         </script>
+      
     </body>
 </html>
